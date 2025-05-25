@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      DATABASE_URL: 'mysql://bd-user-processo:processo1234@mysql:3307/bd_processo'
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: processo-mysql
+    image: mysql:8.0.39
+    environment:
+      MYSQL_ROOT_PASSWORD: 'processo1234'
+      MYSQL_DATABASE: 'bd_processo'
+      MYSQL_USER: 'bd-user-processo'
+      MYSQL_PASSWORD: 'processo1234'
+    ports:
+      - '3307:3306'

@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "9aa4f439-abf9-4fa6-aa1e-f0a97c3b3279",
+		"name": "Process",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43363738"
+	},
+	"item": [
+		{
+			"name": "Api - Register - Processo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Jefferson\",\n  \"email\": \"jefferson@example.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3003/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Login - Processo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"jefferson@example.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3003/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Processo - Criar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiamVmZkBleGFtcGxlLmNvbSIsImlhdCI6MTc0ODExOTE5MSwiZXhwIjoxNzQ4MjA1NTkxfQ.GtHz-x4tXJWtlG064EToWJhWVNZvY5XEW66ipHhP0pg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"number\": \"2025-0001\",\r\n  \"claimant\": \"Empresa X\",\r\n  \"defendant\": \"Empresa Y\",\r\n  \"status\": \"in_progress\",\r\n  \"opening_date\": \"2025-05-24\",\r\n  \"description\": \"Ação de indenização por descumprimento de contrato de fornecimento de produtos.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3003/api/processos"
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Processo - Listar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiamVmZkBleGFtcGxlLmNvbSIsImlhdCI6MTc0ODExOTE5MSwiZXhwIjoxNzQ4MjA1NTkxfQ.GtHz-x4tXJWtlG064EToWJhWVNZvY5XEW66ipHhP0pg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3003/api/processos"
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Processo - Id - Listar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Processo - Atualizar - Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiamVmZkBleGFtcGxlLmNvbSIsImlhdCI6MTc0ODExOTE5MSwiZXhwIjoxNzQ4MjA1NTkxfQ.GtHz-x4tXJWtlG064EToWJhWVNZvY5XEW66ipHhP0pg"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3003/api/processos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Processo - Id - Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiamVmZkBleGFtcGxlLmNvbSIsImlhdCI6MTc0ODExOTE5MSwiZXhwIjoxNzQ4MjA1NTkxfQ.GtHz-x4tXJWtlG064EToWJhWVNZvY5XEW66ipHhP0pg"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3003/api/processos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Users - Get ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Api - Users - Get",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
