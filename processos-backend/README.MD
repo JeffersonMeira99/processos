@@ -30,8 +30,9 @@ API REST para gerenciamento de processos jurídicos e usuários, desenvolvida co
 1. **Clone o repositório**
 
 \`\`\`bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/JeffersonMeira99/processos.git
+cd processos
+cd processos-backend
 \`\`\`
 
 2. **Crie um arquivo `.env` (opcional)**
